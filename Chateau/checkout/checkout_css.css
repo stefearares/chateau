@@ -1,0 +1,243 @@
+body{
+    font-family: 'Lato', sans-serif;
+    margin:0;
+}
+
+section#hero{
+    background-image: url("/misc/great.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#hero h1{
+    padding: 1rem;
+    font-size: 3rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.navbar
+{
+    position: fixed; /* optional daca vreau sa fie peste fundal*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
+    /*sau normal daca il vreau deasupra unei imagini */
+}
+.navbar .brand{
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.navbar .home{
+    text-decoration: none;
+    color: white;
+}
+.navbar-links ul{
+    margin: 0;
+    padding-right: 1rem;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+
+}
+.navbar-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+#responsiveMenuToggleButton{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#responsiveMenuToggleButton svg {
+    height: 1.5rem;
+    width:1.5rem;
+    color: white;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+#responsiveMenuToggleButton .openIcon {
+    display: block;
+}
+#responsiveMenuToggleButton .closeIcon {
+    display: none;
+}
+#responsiveMenuToggleButton.open .openIcon {
+    display: none;
+}
+#responsiveMenuToggleButton.open .closeIcon {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    #responsiveMenuToggleButton{
+        display: block;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links{
+        width: 100%;
+        display: none;
+    }
+    .navbar-links.open{
+        display: block;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.footer {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.footer .social a:hover {
+    opacity: 0.9;
+}
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+}
+
+.col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+}
+
+.col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: white;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: darkblue;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: slategrey;
+}
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}

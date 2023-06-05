@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+section#hero{
+    background-image: url("/misc/v2.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#hero h1{
+    padding: 1rem;
+    font-size: 3rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+section#description{
+    padding: 1rem;
+}
+.navbar
+{
+    position: fixed; /* optional daca vreau sa fie peste fundal*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
+    /*sau normal daca il vreau deasupra unei imagini */
+}
+.navbar .brand{
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.navbar .home{
+    text-decoration: none;
+    color: white;
+}
+.navbar-links ul{
+    margin: 0;
+    padding-right: 1rem;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+
+}
+.navbar-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+#responsiveMenuToggleButton{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#responsiveMenuToggleButton svg {
+    height: 1.5rem;
+    width:1.5rem;
+    color: white;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+#responsiveMenuToggleButton .openIcon {
+    display: block;
+}
+#responsiveMenuToggleButton .closeIcon {
+    display: none;
+}
+#responsiveMenuToggleButton.open .openIcon {
+    display: none;
+}
+#responsiveMenuToggleButton.open .closeIcon {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    #responsiveMenuToggleButton{
+        display: block;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links{
+        width: 100%;
+        display: none;
+    }
+    .navbar-links.open{
+        display: block;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.footer {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.footer .social a:hover {
+    opacity: 0.9;
+}
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+main{
+    max-width: 1500px;
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ main .card{
+     max-width: 300px;
+     text-align: center;
+     flex: 1 1 210px;
+     height: 400px;
+     border: 1px solid lightgray;
+     margin: 20px;
+ }
+
+ main .card .image{
+     height: 50%;
+     margin-bottom: 20px;
+
+ }
+
+
+main .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .card .caption{
+    text-align: center;
+    line-height: 1em;
+    height: 25%;
+}
+main .card .caption p{
+    font-size: 1.5rem;
+}
+main .card button
+{
+    border: 2px solid black;
+    padding:1em;
+    width: 80%;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+main .card button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .3s;
+    margin: 0;
+}
+main .card button::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .3s;
+}
+main .card button:hover::before{
+    width: 5%;
+}
+main .card button:hover::after{
+    width: 5%;
+}
