@@ -6,8 +6,7 @@ session_start();
 <head>
     <title>CHATEAU</title>
     <link rel="icon" type="image/x-icon" href="/misc/castel.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainpage/mainpgae_css.css">
     <link
             rel="stylesheet"
@@ -91,7 +90,7 @@ session_start();
 
 <div class="slidecontainer">
     <div class="slidecontainer">
-        <input type="range" min="100" max="10000" value="100" step="100" class="slider" id="myRange">
+        <input type="range" min="400" max="900" value="100" step="100" class="slider" id="myRange">
     </div>
 </div>
 </main>
