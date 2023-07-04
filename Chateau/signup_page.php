@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
 <div class="wrap">
-  <form class="login-form"action="signup_script.php" method="post"  name="myForm">
+  <form class="login-form"action="signup_script.php" onsubmit="return validateForm()" method="post"  name="myForm">
     <div class="form-header">
       <h3>CHATEAU</h3>
       <p>Sign up to become a member!</p>
@@ -121,6 +121,34 @@ session_destroy();
         passbox.style.borderColor="initial";
         show.innerHTML = '';
 
+      }
+  }
+  function validateForm(){
+      var username=document.getElementById("username").value;
+      var pass=document.getElementById("input").value;
+
+      var i,check;
+      for(i=0;i<pass.length;i++) {
+          if ((pass[i] >= 'A' && pass[i] <= 'Z') || (pass[i] >= 'a' && pass[i] <= 'z') ||  (pass[i] >= '0' && pass[i] <= '9'))
+              check = 0;
+          else
+          {   check=1;
+              return false;
+          }
+      }
+      for(i=0;i<username.length;i++) {
+          if ((username[i] >= 'A' && username[i] <= 'Z') || (username[i] >= 'a' && username[i] <= 'z') ||  (username[i] >= '0' && username[i] <= '9'))
+              check = 0;
+          else
+          {   check=1;
+              return false;
+          }
+      }
+      if(check===1) {
+          return false;
+      }
+      else{
+          return true;
       }
   }
 
